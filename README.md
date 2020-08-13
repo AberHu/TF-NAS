@@ -13,7 +13,7 @@ With the flourish of differentiable neural architecture search (NAS), automatica
 - (Optional) apex from [this link](https://github.com/NVIDIA/apex.git)
 
 ## Model Zoo
-Our pretrained models can be downloaded in the following links. The complete list of the models can be found in [this link](https://drive.google.com/drive/folders/1IVI33i8KQXPxunNBIObkwK4PjvtwaI-R).
+Our pretrained models can be downloaded in the following links. The complete list of the models can be found [here](https://drive.google.com/drive/folders/1IVI33i8KQXPxunNBIObkwK4PjvtwaI-R).
 
 Name | FLOPs | Top-1(%) | Top-5(%) | GPU Lat | CPU Lat | Pretrained Model
 :---- | :-----: | :----: | :----: | :----: | :----: | :----:
