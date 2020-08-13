@@ -1,6 +1,6 @@
 # TF-NAS
 
-Official Pytorch code of paper [TF-NAS: Rethinking Three Search Freedoms of Latency-Constrained Differentiable Neural Architecture Search]() in ECCV2020.
+Official Pytorch code of paper [TF-NAS: Rethinking Three Search Freedoms of Latency-Constrained Differentiable Neural Architecture Search](https://arxiv.org/abs/2008.05314) in ECCV2020.
 
 With the flourish of differentiable neural architecture search (NAS), automatically searching latency-constrained architectures gives a new perspective to reduce human labor and expertise. However, the searched architectures are usually suboptimal in accuracy and may have large jitters around the target latency. In this paper, we rethink three freedoms of differentiable NAS, i.e. operation-level, depth-level and width-level, and propose a novel method, named Three-Freedom NAS (TF-NAS), to achieve both good classification accuracy and precise latency constraint. For the operation-level, we present a **bi-sampling** search algorithm to moderate the operation collapse. For the depth-level, we introduce a **sink-connecting** search space to ensure the mutual exclusion between skip and other candidate operations, as well as eliminate the architecture redundancy. For the width-level, we propose an **elasticity-scaling** strategy that achieves precise latency constraint in a progressively fine-grained manner. Experiments on ImageNet demonstrate the effectiveness of TF-NAS. Particularly, our searched TF-NAS-A obtains 76.9% top-1 accuracy, achieving state-of-the-art results with less latency. The total search time is only 1.8 days on 1 Titan RTX GPU.
 
@@ -13,7 +13,18 @@ With the flourish of differentiable neural architecture search (NAS), automatica
 - (Optional) apex from [this link](https://github.com/NVIDIA/apex.git)
 
 ## Model Zoo
-We will update the model zoo.
+Our pretrained models can be downloaded in the following links. The complete list of the models can be found in [this link](https://drive.google.com/drive/folders/1IVI33i8KQXPxunNBIObkwK4PjvtwaI-R).
+
+Name | FLOPs | Top-1(%) | Top-5(%) | GPU Lat | CPU Lat | Pretrained Model
+:---- | :-----: | :----: | :----: | :----: | :----: | :----:
+TF-NAS-A | 457M | 76.87 | 93.11 | 18.03ms | 80.14ms | [Google Drive](https://drive.google.com/drive/folders/1yirUt1X4sxC9-z6g6NyvhHSVvCN7Smx6)
+TF-NAS-B | 361M | 76.28 | 92.88 | 15.06ms | 72.10ms | [Google Drive](https://drive.google.com/drive/folders/18PL8Bt8knEuHJgkNuHvLogI8kQckz-jK)
+TF-NAS-C | 284M | 75.15 | 92.13 | 11.95ms | 51.87ms | [Google Drive](https://drive.google.com/drive/folders/1S_Hu-bqeMYFaB9YBVBaRcY8z2jQyYbjp)
+TF-NAS-D | 219M | 74.19 | 91.45 | 10.08ms | 46.09ms | [Google Drive](https://drive.google.com/drive/folders/18_bXA-79gAVqpPUuu_Qm34JOlnSr6dU4)
+TF-NAS-CPU-A | 305M | 75.83 | 92.57 | 14.00ms | 60.11ms | [Google Drive](https://drive.google.com/drive/folders/1GnwPF2W5vY85Lr5nQW2ehF9OaftKEL9E)
+TF-NAS-CPU-B | 230M | 74.44 | 91.82 | 10.29ms | 40.09ms | [Google Drive](https://drive.google.com/drive/folders/1NGOXxP9y5z9IYELAnIkP-8hrCn-i_OvF)
+
+GPU and CPU Lat is measured on Titan RTX 24G GPU and Intel Xeon Gold 6130 @ 2.10GHz, respectively.
 
 ## Search
 For searching, taking the following script as an example:
