@@ -129,5 +129,5 @@ CUDA_VISIBLE_DEVICES=0,1 python -u -m torch.distributed.launch --nproc_per_node=
 CUDA_VISIBLE_DEVICES=0 python -u test.py \
 	--val_root "Your ImageNet Val Set Path" \
 	--val_list "ImageNet Val List" \
-	--model_path "./model.config" \
+	--config_path "./model.config" \
 	--weights "Pretrained Weights"
