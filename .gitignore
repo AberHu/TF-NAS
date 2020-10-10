@@ -130,3 +130,5 @@ dmypy.json
 
 checkpoints_exp/
 model.config
+checkpoints/TF-NAS*
+checkpoints/search*
