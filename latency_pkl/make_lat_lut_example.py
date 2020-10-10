@@ -78,10 +78,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 16*4+1))
+			# mc_list = list(range(0, 16*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 16*8+1))
+			# mc_list = list(range(0, 16*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 16*2+1))
+			# mc_list = list(range(0, 16*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
@@ -111,10 +117,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 24*4+1))
+			# mc_list = list(range(0, 24*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 24*8+1))
+			# mc_list = list(range(0, 24*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 24*2+1))
+			# mc_list = list(range(0, 24*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
@@ -144,10 +156,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 24*4+1))
+			# mc_list = list(range(0, 24*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 24*8+1))
+			# mc_list = list(range(0, 24*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 24*2+1))
+			# mc_list = list(range(0, 24*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
@@ -176,10 +194,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 40*4+1))
+			# mc_list = list(range(0, 40*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 40*8+1))
+			# mc_list = list(range(0, 40*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 40*2+1))
+			# mc_list = list(range(0, 40*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
@@ -208,10 +232,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 40*4+1))
+			# mc_list = list(range(0, 40*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 40*8+1))
+			# mc_list = list(range(0, 40*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 40*2+1))
+			# mc_list = list(range(0, 40*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
@@ -240,10 +270,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 80*4+1))
+			# mc_list = list(range(0, 80*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 80*8+1))
+			# mc_list = list(range(0, 80*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 80*2+1))
+			# mc_list = list(range(0, 80*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
@@ -272,10 +308,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 80*4+1))
+			# mc_list = list(range(0, 80*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 80*8+1))
+			# mc_list = list(range(0, 80*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 80*2+1))
+			# mc_list = list(range(0, 80*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
@@ -304,10 +346,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 112*4+1))
+			# mc_list = list(range(0, 112*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 112*8+1))
+			# mc_list = list(range(0, 112*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 112*2+1))
+			# mc_list = list(range(0, 112*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
@@ -336,10 +384,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 112*4+1))
+			# mc_list = list(range(0, 112*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 112*8+1))
+			# mc_list = list(range(0, 112*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 112*2+1))
+			# mc_list = list(range(0, 112*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
@@ -368,10 +422,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 192*4+1))
+			# mc_list = list(range(0, 192*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 192*8+1))
+			# mc_list = list(range(0, 192*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 192*2+1))
+			# mc_list = list(range(0, 192*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
@@ -400,10 +460,16 @@ def get_latency_lookup(is_cuda):
 		op = PRIMITIVES[idx]
 		if op.startswith('MBI') and (idx % 2 == 0):
 			mc_list = list(range(1, 192*4+1))
+			# mc_list = list(range(0, 192*4+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('MBI') and (idx % 2 == 1):
 			mc_list = list(range(1, 192*8+1))
+			# mc_list = list(range(0, 192*8+1, 8))
+			# mc_list[0] = 1
 		elif op.startswith('Bot'):
 			mc_list = list(range(1, 192*2+1))
+			# mc_list = list(range(0, 192*2+1, 8))
+			# mc_list[0] = 1
 		else:
 			raise ValueError
 
